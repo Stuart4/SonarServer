@@ -8,9 +8,6 @@ import java.net.Socket;
 public class SonarServer {
     public static void main(String[] args) {
         try {
-            Process p = Runtime.getRuntime().exec("/bin/bash");
-            p.waitFor();
-            System.out.println(p.exitValue());
             System.out.println("hello, welcome to the server...");
             ServerSocket welcomeHome = new ServerSocket(8899);
 
@@ -22,6 +19,7 @@ public class SonarServer {
 
         } catch (Throwable e) {
             main(new String[]{});
+
         }
 
     }
