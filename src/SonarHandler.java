@@ -22,6 +22,8 @@ public class SonarHandler {
             Process p = Runtime.getRuntime().exec("sh script.sh");
             p.waitFor();
         } catch (InterruptedException e) {
+        } finally {
+            f.close();
         }
 
     }
