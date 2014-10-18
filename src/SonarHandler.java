@@ -6,7 +6,7 @@ import java.net.Socket;
  */
 public class SonarHandler {
     public SonarHandler(Socket s) throws IOException {
-        Process p = Runtime.getRuntime().exec("/bin/bash");
+        Process p = Runtime.getRuntime().exec("echo 0");
         System.out.println(p.exitValue());
         BufferedReader br = new BufferedReader(new InputStreamReader (s.getInputStream()));
         StringBuilder sb = new StringBuilder();
