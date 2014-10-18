@@ -6,9 +6,6 @@ import java.net.Socket;
  */
 public class SonarHandler {
     public SonarHandler(Socket s) throws IOException {
-        Process p = Runtime.getRuntime().exec("echo 0");
-        System.out.println(p.exitValue());
-        System.out.println("hello, welcome to the server...");
         BufferedReader br = new BufferedReader(new InputStreamReader (s.getInputStream()));
         StringBuilder sb = new StringBuilder();
 
