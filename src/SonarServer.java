@@ -13,6 +13,7 @@ public class SonarServer {
 
             while (true) {
                 Socket s = welcomeHome.accept();
+                System.out.println("client connected.");
                 new SonarHandler(s);
                 welcomeHome = new ServerSocket(8899);
             }
