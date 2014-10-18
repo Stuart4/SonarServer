@@ -19,7 +19,7 @@ public class SonarServer {
             }
 
         } catch (Throwable e) {
-            main(new String[]{});
+//            main(new String[]{});
 
         }
 
